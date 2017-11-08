@@ -1,0 +1,11 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-body">
+          <p class="message">Do you really want to delete {firstName} ?</p>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="_closeModal ui-button">Cancel</button>
+        <button type="button" class="_deleteModel ui-button">Delete</button>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+
+    <img src="css/images/{sex}.jpg" />
+    <p><h1>{firstName}</h1></p>
+    <p><strong>Phone:</strong> {phone}</p>
+    <p><strong>Group:</strong> {group}</p>
+    <button data-id="{id}" class="btn_delete ui-button" type="submit" value="Submit">Delete</button>
