@@ -5,7 +5,7 @@ define(function (require) {
 
     var Backbone = require('backbone'),
         Dust = require('dust'),
-        jquery_UI = require('jquery-ui');
+        jquery_ui = require('jquery-ui');
 
     return Backbone.View.extend({
 

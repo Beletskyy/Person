@@ -7,7 +7,6 @@ define(function (require) {
         Template = require('text!template/template.person.dust');
 
     return BaseView.extend({
-        /*tagName: "ul",*/
         template: Template,
 
         render: function() {

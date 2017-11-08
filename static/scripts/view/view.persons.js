@@ -8,12 +8,12 @@ define(function (require) {
         ViewModal = require('viewModal');
 
     return Backbone.View.extend({
-        /*el: '.table',*/
         el: '.contact',
 
         events: {
             "click .btn_delete": "confirm"
         },
+
         initialize: function(){
             this.listenTo(this.collection, 'remove', this.render);
         },
