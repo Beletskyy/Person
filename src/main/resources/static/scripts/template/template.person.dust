@@ -1,0 +1,7 @@
+<img src="images/{gender}.jpg" />
+<p><h1>{name}</h1></p>
+<p><strong>Phone:</strong> {phone}</p>
+<p><strong>Group:</strong> {department}</p>
+<a href="#users/{id}/form" data-id="{id}">
+        <input type="button" value="Edit" class="btn_update ui-button"/></a>
+<button data-id="{id}" class="btn_delete ui-button" type="submit" value="Submit">Delete</button>

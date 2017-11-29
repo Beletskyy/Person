@@ -1,0 +1,13 @@
+INSERT INTO USER VALUES (1, 'Ann', '1234567890', 'female', 'home');
+INSERT INTO USER VALUES (2, 'John', '1234567890', 'male', 'home');
+INSERT INTO USER VALUES (3, 'Mike', '1234567890', 'male', 'home');
+INSERT INTO USER VALUES (4, 'James', '1234567890', 'male', 'home');
+INSERT INTO USER VALUES (5, 'Carrie', '1234567890', 'female', 'home');
+INSERT INTO USER VALUES (6, 'Sara', '1234567890', 'female', 'job');
+INSERT INTO USER VALUES (7, 'Mason', '1234567890', 'male', 'job');
+INSERT INTO USER VALUES (8, 'Isabella', '1234567890', 'female', 'job');
+INSERT INTO USER VALUES (9, 'William', '1234567890', 'male', 'job');
+INSERT INTO USER VALUES (10, 'Ava', '1234567890', 'female', 'job');
+INSERT INTO USER VALUES (11, 'Avatar', '1234567890', 'male', 'job');
+INSERT INTO USER VALUES (12, 'Padma', '1234567890', 'female', 'job');
+INSERT INTO USER VALUES (13, 'Kate', '1234567890', 'female', 'job');

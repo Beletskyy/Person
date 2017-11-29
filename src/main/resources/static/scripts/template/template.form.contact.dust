@@ -1,0 +1,58 @@
+<h2>{?id}Update{:else}Add new{/id} contact</h2>
+<form>
+    <div id="name-group" class="form-group">
+        <h3><label>Name:</label></h3>
+        <div>
+             <input id="name" required type="text" name="name" value="{name}" placeholder="First name">
+        </div>
+        <span class="help-block hidden"></span>
+    </div>
+    <div id="phone-group" class="form-group">
+        <h3><label>Phone:</label></h3>
+        <div>
+             <input id="phone" required type="text" name="phone" value="{phone}" placeholder="Phone">
+        </div>
+        <span class="help-block hidden"></span>
+    </div>
+    <div id="gender-group" class="form-group">
+        <h3><label>Gender:</label></h3>
+        <div>
+            {?id}
+                 <select id="gender" required name="gender" value="{gender}">
+                     <option value="female">female</option>
+                     <option value="male">male</option>
+                 </select>
+             {:else}
+                   <select id="gender" required name="gender"">
+                      <option value="" disabled selected hidden>Select gender...</option>
+                      <option value="female">female</option>
+                      <option value="male">male</option>
+                   </select>
+            {/id}
+        </div>
+        <span class="help-block hidden"></span>
+    </div>
+    <div id="department-group" class="form-group">
+        <h3><label>Group:</label></h3>
+        <div>
+            {?id}
+                 <select id="department" required name="department" value="{department}">
+                     <option value="home">home</option>
+                     <option value="job">job</option>
+                 </select>
+             {:else}
+                  <select id="department" required name="department">
+                      <option value="" disabled selected hidden>Select department...</option>
+                      <option value="home">home</option>
+                      <option value="job">job</option>
+                  </select>
+            {/id}
+        </div>
+        <span class="help-block hidden"></span>
+    </div>
+    {?id}
+        <input type="button" data-id="{id}" value="Update" class="btn_update ui-button"/>
+    {:else}
+        <input type="button" data-id="{id}" value="Add" class="btn_create ui-button"/>
+    {/id}
+</form>
