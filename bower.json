@@ -5,6 +5,8 @@
         "jquery": null,
         "jquery-ui": null,
         "backbone-amd": null,
+        "backbone-validation": null,
+        "backbone-route-control": null,
         "underscore-amd": null,
         "requirejs": null,
         "requirejs-text": null,

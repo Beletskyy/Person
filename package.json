@@ -1,18 +1,15 @@
 {
   "name": "advanced_backbone",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "dependencies": {
-    "express": "^4.14.0"
-  },
+  "version": "0.0.1",
+  "description": "Advanced backbone + Spring Boot",
   "devDependencies": {},
   "scripts": {
-    "start": "node server.js"
+    "postinstall": "bower install"
   },
   "repository": {
-    "type": "git"
+    "type": "git",
+    "url": "https://github.com/Beletskyy/Person.git"
   },
-  "author": "",
+  "author": "Beletskyy",
   "license": "ISC"
 }
