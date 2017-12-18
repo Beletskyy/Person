@@ -2,9 +2,10 @@ require.config({
     paths: {
         jquery : "vendors/jquery/dist/jquery",
         jquery_ui : "vendors/jquery-ui/jquery-ui",
-        underscore : "vendors/underscore-amd/underscore",
-        backbone : "vendors/backbone-amd/backbone",
+        underscore : "vendors/underscore/underscore",
+        backbone : "vendors/backbone/backbone",
         backboneValidation : "vendors/backbone-validation/dist/backbone-validation-amd",
+        backbonePaginator : "vendors/backbone.paginator/lib/backbone.paginator",
         routeControl: "vendors/backbone-route-control/backbone-route-control",
         dust : "vendors/dustjs-linkedin/dist/dust-full",
         text : "vendors/requirejs-text/text"
@@ -15,6 +16,8 @@ require.config({
             persons : "collection/collection.person",
             //views
             baseView : "view/base.view",
+            viewSearch : "view/view.search",
+            viewPagination : "view/view.pagination",
             viewForm : "view/view.form",
             viewModal : "view/view.modal",
             viewPerson : "view/view.person",

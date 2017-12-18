@@ -13,10 +13,6 @@ define(function (require) {
             'click ._deleteModel': 'delete'
         },
 
-        initialize: function(/*options*/) {
-
-        },
-
         render: function() {
             BaseView.prototype.renderModal.apply(this, arguments);
             return this;

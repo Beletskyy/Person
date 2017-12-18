@@ -50,9 +50,11 @@
         </div>
         <span class="help-block hidden"></span>
     </div>
-    {?id}
-        <input type="button" data-id="{id}" value="Update" class="btn_update ui-button"/>
-    {:else}
-        <input type="button" data-id="{id}" value="Add" class="btn_create ui-button"/>
-    {/id}
+    <div class="btn_action">
+        {?id}
+            <input type="button" data-id="{id}" value="Update" class="btn_update ui-button"/>
+        {:else}
+            <input type="button" data-id="{id}" value="Add" class="btn_create ui-button"/>
+        {/id}
+    </div>
 </form>

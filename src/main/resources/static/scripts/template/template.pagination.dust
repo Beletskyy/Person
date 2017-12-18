@@ -1,0 +1,13 @@
+<div class="total">
+     <h3>Contacts {state.size} of {?state.totalRecords}
+                                         {state.totalRecords}
+                                    {:else}
+                                         {state.size}
+                                    {/state.totalRecords} || Page: {state.currentPage} of {state.lastPage}</h3>
+</div>
+<div class="navigation">
+    <button type="button" class="button_fst ui-button">First</button>
+    <button type="button" class="button_prev ui-button">Previous</button>
+    <button type="button" class="button_next ui-button">Next</button>
+    <button type="button" class="button_last ui-button">Last</button>
+</div>

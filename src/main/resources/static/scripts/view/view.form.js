@@ -17,7 +17,7 @@ define(function (require) {
         },
 
         initialize: function () {
-            Backbone.Validation.bind(this.model, {
+            Backbone.Validation.bind(this, {
                 valid: function(view, attr, selector) {
                     var $el = $('[name=' + attr + ']'),
                         $group = $el.closest('.form-group');

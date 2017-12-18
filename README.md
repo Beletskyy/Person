@@ -21,6 +21,8 @@ Server will be able on localhost:3000
    - A simple list of contacts with CRUD operations.
    - Validation.
    - Confirmation pop-up before deleting user.
+   - Search.
+   - Pagination.
    
 ## Author
 
