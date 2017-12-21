@@ -1,11 +1,10 @@
-<div id="search">
-    <form>
-      Search contact:
-      <input type="search" name="contactQuery">
-      <input type="button" value="Search" class="btn_search ui-button">
-    </form>
+<div>
+    <input type="text" placeholder="Search" name="contactQuery" class="search">
+    <input type="button" id="search" value="Search" class="ui-button">
+    <input type="button" id="reset" value="Reset" class="ui-button">
 </div>
 <div id="addNew">
     <a href="#users/form" data-id="{id}">
     <input type="button" value="+ Add new contact" class="btn_add ui-button"/></a>
 </div>
+<p><h1 id="noResult"></h1></p>

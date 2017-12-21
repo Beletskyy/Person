@@ -20,19 +20,9 @@ define(function (require) {
             },
 
             showUsers: function () {
-                $(".btn_add").show();
-                if(app.viewForm) {
-                    app.viewForm.remove();
-                }
-                if (app.viewUsers) {
-                    app.viewUsers.leave();
-                }
-                if (app.users) {
-                    app.users.remove();
-                }
-
+                this.removeObjects([app.viewForm, app.viewUsers, app.users, app.viewPagination, app.viewSearch]);
                 app.users = new Persons();
-                app.users.fetch({ fetch: true }).done(function () {
+                app.users.fetch({fetch: true}).done(function () {
                     /*Create and generate Pagination*/
                     var Page = Backbone.Model.extend();
                     app.users.state.size = app.users.size();
@@ -47,6 +37,9 @@ define(function (require) {
                     $(document.body).append(app.viewPagination.render().el);
 
                     /*Create and generate Contacts View*/
+                    if(app.viewUsers){
+                        app.viewUsers.remove();
+                    }
                     app.viewUsers = new ViewUsers({
                         collection: app.users,
                         pagination: modelPagination
@@ -60,37 +53,37 @@ define(function (require) {
                 Backbone.history.navigate("users/page/" + pageNum, false);
             },
 
-            showPagination: function () {
-                var Page = Backbone.Model.extend();
-                var model = new Page({
-                    state: app.users.state
-                });
-
-                app.viewPagination = new ViewPagination({
-                    model: model,
-                    users: app.users
-                });
-                $(document.body).append(app.viewPagination.render().el);
-            },
-
             showSearch: function () {
-                app.viewSearch = new ViewSearch();
+                app.viewSearch = new ViewSearch({
+                    collection: app.users
+                });
                 $(document.body).prepend(app.viewSearch.render().el);
             },
 
-            showForm: function (id) {
-                app.viewUsers.leave();
-                if (app.viewForm) {
-                    app.viewForm.remove();
+            searchUsers: function (query) {
+                if (!app.viewUsers && !app.users) {
+                    this.showUsers();
+                    return;
                 }
-                if(app.viewPagination) {
-                    app.viewPagination.remove();
+                this.removeObjects([app.viewUsers]);
+                $(".paginator").hide();
+                $('#noResult').empty();
+                var result = app.users.search(query);
+                var prevCollection = app.users.fullCollection;
+                app.users.reset(result, {silent: true});
+                app.users.fullCollection = prevCollection;
+                $(document.body).append(app.viewUsers.render().el);
+                if (result.length === 0) {
+                    $('#noResult').text("No result to show");
                 }
-                if(app.viewSearch){
-                    app.viewSearch.remove();
-                }
-                $(".btn_add").hide();
+            },
 
+            showForm: function (id) {
+                this.removeObjects([app.viewForm, app.viewUsers, app.viewPagination, app.viewSearch]);
+                if (!app.users) {
+                    this.showUsers();
+                    return;
+                }
                 if (id == null || id === undefined) {
                     var user = new Person();
                     app.users.add(user, {silent: true});
@@ -103,8 +96,13 @@ define(function (require) {
                     });
                 }
                 $(document.body).append(app.viewForm.render().el);
+            },
+
+            removeObjects: function (obj) {
+                _.each(obj, function (item) {
+                    !item || item.leave();
+                });
             }
         };
-    };
-
+    }
 });

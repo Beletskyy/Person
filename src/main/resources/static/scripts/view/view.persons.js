@@ -34,6 +34,8 @@ define(function (require) {
         },
 
         afterRemove: function () {
+            $('.paginator').show();
+            $('.search').val('');
             var pageNum = this.collection.state.currentPage;
             this.collection.getPage(pageNum);
         },
@@ -63,12 +65,11 @@ define(function (require) {
 
         leave: function() {
             this.removeChildViews();
-            // this.remove();
         },
 
         removeChildViews: function () {
             _(this.personSubViews).each(function(view) {
-                view.onClose();
+                view.leave();
             }, this);
             this.personSubViews = [];
         }

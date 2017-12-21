@@ -1,13 +1,15 @@
 require.config({
     paths: {
-        jquery : "vendors/jquery/dist/jquery",
-        jquery_ui : "vendors/jquery-ui/jquery-ui",
-        underscore : "vendors/underscore/underscore",
-        backbone : "vendors/backbone/backbone",
-        backboneValidation : "vendors/backbone-validation/dist/backbone-validation-amd",
-        backbonePaginator : "vendors/backbone.paginator/lib/backbone.paginator",
+        jquery : "vendors/jquery/dist/jquery.min",
+        jquery_ui : "vendors/jquery-ui/jquery-ui.min",
+        underscore : "vendors/underscore/underscore-min",
+        backbone : "vendors/backbone/backbone-min",
+        backboneValidation : "vendors/backbone-validation/dist/backbone-validation-amd-min",
+        backbonePaginator : "vendors/backbone.paginator/lib/backbone.paginator.min",
         routeControl: "vendors/backbone-route-control/backbone-route-control",
-        dust : "vendors/dustjs-linkedin/dist/dust-full",
+        dust : "vendors/dustjs-linkedin/dist/dust-full.min",
+        dustCore : "vendors/dustjs-linkedin/dist/dust-core.min",
+        dustjs_helpers : "vendors/dustjs-helpers/dist/dust-helpers.min",
         text : "vendors/requirejs-text/text"
     },
     map : {

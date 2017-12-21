@@ -28,7 +28,9 @@ define(function (require) {
         },
 
         gotoFirst: function () {
-            this.navigateToPage("first");
+            if(this.users.hasPreviousPage()){
+                this.navigateToPage("first");
+            }
         },
 
         gotoPrev: function () {

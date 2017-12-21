@@ -12,10 +12,6 @@ define(function (require) {
         render: function() {
             BaseView.prototype.render.apply(this, arguments);
             return this;
-        },
-
-        onClose: function () {
-            this.remove();
         }
     });
 

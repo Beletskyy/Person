@@ -3,14 +3,14 @@
     <div id="name-group" class="form-group">
         <h3><label>Name:</label></h3>
         <div>
-             <input id="name" required type="text" name="name" value="{name}" placeholder="First name">
+             <input id="name" type="text" name="name" value="{name}" placeholder="First name">
         </div>
         <span class="help-block hidden"></span>
     </div>
     <div id="phone-group" class="form-group">
         <h3><label>Phone:</label></h3>
         <div>
-             <input id="phone" required type="text" name="phone" value="{phone}" placeholder="Phone">
+             <input id="phone" type="text" name="phone" value="{phone}" placeholder="Phone">
         </div>
         <span class="help-block hidden"></span>
     </div>
@@ -18,12 +18,12 @@
         <h3><label>Gender:</label></h3>
         <div>
             {?id}
-                 <select id="gender" required name="gender" value="{gender}">
-                     <option value="female">female</option>
-                     <option value="male">male</option>
+                 <select id="gender" name="gender" value="{gender}">
+                     <option {@eq key=gender value="female"} selected {/eq}>female</option>
+                     <option {@eq key=gender value="male"} selected {/eq}>male</option>
                  </select>
              {:else}
-                   <select id="gender" required name="gender"">
+                   <select id="gender" name="gender"">
                       <option value="" disabled selected hidden>Select gender...</option>
                       <option value="female">female</option>
                       <option value="male">male</option>
@@ -36,12 +36,12 @@
         <h3><label>Group:</label></h3>
         <div>
             {?id}
-                 <select id="department" required name="department" value="{department}">
-                     <option value="home">home</option>
-                     <option value="job">job</option>
+                 <select id="department" name="department" value="{department}">
+                     <option {@eq key=department value="home"} selected {/eq}>home</option>
+                     <option {@eq key=department value="job"} selected {/eq}>job</option>
                  </select>
              {:else}
-                  <select id="department" required name="department">
+                  <select id="department" name="department">
                       <option value="" disabled selected hidden>Select department...</option>
                       <option value="home">home</option>
                       <option value="job">job</option>

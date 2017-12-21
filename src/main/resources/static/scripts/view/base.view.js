@@ -5,6 +5,8 @@ define(function (require) {
 
     var Backbone = require('backbone'),
         Dust = require('dust'),
+        DustCore = require('dustCore'),
+        Dustjs_helpers = require('dustjs_helpers'),
         jquery_ui = require('jquery_ui');
 
     return Backbone.View.extend({
@@ -39,6 +41,10 @@ define(function (require) {
                 }
             });
             return output;
+        },
+
+        leave: function () {
+            this.remove();
         }
     });
 

@@ -11,6 +11,7 @@ define(function (require) {
             'users(/)': 'users#showUsers',
             'users/:id/form': 'users#showForm',
             'users/form': 'users#showForm',
+            'users/search/:query': 'users#searchUsers',
             "*other": 'users#showUsers'
         }
     });
